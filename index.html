@@ -8,7 +8,8 @@
 	<link rel="shortcut icon" href="img/favicon.ico"> 
 	<link rel="stylesheet" href="css/vendor/fluidbox.min.css">
 	<link rel="stylesheet" href="css/main.css">
-
+	<link rel="stylesheet" href="css/search-box.css">
+	
 	<title>Speak with Snaps | Child Assisstant</title>
 
 </head>
@@ -41,6 +42,17 @@
 			</p>
 			<p>
 			Enter the name of the child below:
+			
+			<!-- search bar -->
+			
+			<div id="sb-search" class="sb-search">
+				<form>
+					<input class="sb-search-input" placeholder="Enter your search term..." type="search" value="" name="search" id="search">
+					<input class="sb-search-submit" type="submit" value="">
+					<span class="sb-icon-search"></span>
+				</form>
+			</div>
+			
 			</p>
 		</section>
 
@@ -89,6 +101,8 @@
 	</div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/search-box.js"></script>
+	<script src="js/search-box.js"></script>
 	<script>
 	if (!window.jQuery) 
 	{
