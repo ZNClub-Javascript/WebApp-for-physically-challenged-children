@@ -71,33 +71,81 @@
 					  </div>
 					</div>			
 			<div class="photo-grid">
-				<a class="img-hover" ng-href="img/{{name}}-eat.jpg" rel="lightbox" class="col-3">
-				<img ng-src="img/{{name}}-eat.jpg" alt="EAT" style="height: 400px;width:400px"></a>
+				
+				<a class="img-hover" ng-href="img/{{name}}-eat.jpg" rel="lightbox" class="col-3">				
+				<img ng-src="img/{{name}}-eat.jpg" alt="EAT" style="height: 400px;width:400px">
+				<figcaption>FEELING HUNGRY</figcaption>
+				</a>
+				
+				
 				<a class="img-hover" ng-href="img/{{name}}-drink.jpg" rel="lightbox" class="col-3">
-				<img ng-src="img/{{name}}-drink.jpg" alt="DRINK" style="height: 400px;width:400px"></a>
+				<img ng-src="img/{{name}}-drink.jpg" alt="DRINK" style="height: 400px;width:400px">
+				<figcaption>FEELING THIRSTY</figcaption>
+				</a>
+				
 				<a class="img-hover"  ng-href="img/{{name}}-pee.jpg" rel="lightbox" class="col-3">
-				<img ng-src="img/{{name}}-pee.jpg" alt="PEE" style="height: 400px;width:400px"></a>
+				<img ng-src="img/{{name}}-pee.jpg" alt="PEE" style="height: 400px;width:400px">
+				<figcaption>WANT TO GO THE TOILET</figcaption>
+				</a>
+				
+				
 				<a class="img-hover" ng-href="img/{{name}}-headache.jpg" rel="lightbox" class="col-3">
-				<img ng-src="img/{{name}}-headache.jpg" alt="HEAD ACHE" style="height: 400px;width:400px"></a>
+				<img ng-src="img/{{name}}-headache.jpg" alt="HEAD ACHE" style="height: 400px;width:400px">
+				<figcaption>HAVE HEAD ACHE</figcaption>
+				</a>
+				
 				<a class="img-hover"  ng-href="img/{{name}}-stomachache.jpg" rel="lightbox" class="col-3">
-				<img ng-src="img/{{name}}-stomachache.jpg" alt="STOMACH ACHE" style="height: 400px;width:400px"></a>
+				<img ng-src="img/{{name}}-stomachache.jpg" alt="STOMACH ACHE" style="height: 400px;width:400px">
+				<figcaption>HAVE STOMACH ACHE</figcaption>
+				</a>
+				
+				
 				<a class="img-hover" ng-href="img/{{name}}-playcricket.jpg" rel="lightbox" class="col-3">
-				<img ng-src="img/{{name}}-playcricket.jpg" alt="PLAY CRICKET" style="height: 400px;width:400px"></a>
-				<p>PLAY CRICKET</p>
+				<img ng-src="img/{{name}}-playcricket.jpg" alt="PLAY CRICKET" style="height: 400px;width:400px">
+				<figcaption>WANT TO PLAY</figcaption>
+				</a>
+				
 				
 				
 			</div>
 			
 		</section>
 
-		<!-- <section class="row">
-			<div class="col-full">
-				<h2>Example title</h2>
-				<p>
-					Gumba is a fictional agency from Amsterdam, The Netherlands. This is the place where you would normally introduce yourself. You can easily change the template to fit your needs by adding text or changing the colors and styles.
-				</p>
+		<section class="row">
+			
+				<h2>Add A Snap</h2>
+			<form action="#">
+			<div class="col-full">	
+				  <div class="container-1">					
+					  <input type="text" id="insert" ng-model="insert" placeholder="Enter a name..." /><br/>					  
+									  
+				  </div>
 			</div>
-		</section> -->
+			<div class="col-full" ng-init="companies=['FEELING HUNGRY','FEELING THIRSTY','WANT TO GO THE TOILET','HAVE HEAD ACHE','HAVE STOMACH ACHE','WANT TO PLAY'];">	
+				  
+					<select class="dropbtn" ng-model="companyName"
+						ng-options='x for x in companies'>        
+					</select>
+				  
+			</div>
+			<div class="col-full">	
+				  <div class="container-1">					
+					
+					  <input type="file" id="snap"  />
+					  <label for="snap">Choose a file</label>
+					
+				  </div>
+			</div>	
+			<div class="col-full">	
+				  <div class="container-1">					
+					
+					  <input type="submit" class="button" value="Add Snap" />
+					  
+					
+				  </div>
+			</div>	
+			</form> 
+		</section> 
 
 		<section class="row">
 			
@@ -131,7 +179,10 @@
 		<section class="row">
 			<div class="col-full">
 				<p>
-					© 2014 - This is a free website template by <a href="http://www.pixelsbyrick.com">Rick Waalders</a>
+					© 2014 - This is a free website template by <a href="http://www.pixelsbyrick.com" target="blank">Rick Waalders</a>
+				</p>
+				<p>
+				© 2017 - Licensed by ZNClub-Javascript <a href="https://nevildsouza.wordpress.com/" target="blank">ZNevzz</a>
 				</p>
 			</div>
 		</section>
