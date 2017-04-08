@@ -40,7 +40,7 @@
 	var app = angular.module('Snaps', []);
 	app.controller('searchCntl', function ($scope){
 	
-		$scope.placesVisited = [];
+		$scope.name='demo';
 		
 	});
 	</script>
@@ -49,7 +49,8 @@
 
 		<section class="intro">			
 			<p>
-				Speak with Snaps is a simple single-page website template. This is the place where you would normally introduce yourself. You can easily change the template to fit your needs by changing the text, photos and styles.				
+				Speak with Snaps is a simple single-page app for NGO members who teach & take care of specially challenged or deaf and dumb young children. 
+				This app is a step to simplify communication process between the child and the teacher.
 				Enter the name of the child below:
 			</p>						
 			
@@ -69,7 +70,23 @@
 						  
 					  </div>
 					</div>			
-			
+			<div class="photo-grid">
+				<a class="img-hover" ng-href="img/{{name}}-eat.jpg" rel="lightbox" class="col-3">
+				<img ng-src="img/{{name}}-eat.jpg" alt="EAT" style="height: 400px;width:400px"></a>
+				<a class="img-hover" ng-href="img/{{name}}-drink.jpg" rel="lightbox" class="col-3">
+				<img ng-src="img/{{name}}-drink.jpg" alt="DRINK" style="height: 400px;width:400px"></a>
+				<a class="img-hover"  ng-href="img/{{name}}-pee.jpg" rel="lightbox" class="col-3">
+				<img ng-src="img/{{name}}-pee.jpg" alt="PEE" style="height: 400px;width:400px"></a>
+				<a class="img-hover" ng-href="img/{{name}}-headache.jpg" rel="lightbox" class="col-3">
+				<img ng-src="img/{{name}}-headache.jpg" alt="HEAD ACHE" style="height: 400px;width:400px"></a>
+				<a class="img-hover"  ng-href="img/{{name}}-stomachache.jpg" rel="lightbox" class="col-3">
+				<img ng-src="img/{{name}}-stomachache.jpg" alt="STOMACH ACHE" style="height: 400px;width:400px"></a>
+				<a class="img-hover" ng-href="img/{{name}}-playcricket.jpg" rel="lightbox" class="col-3">
+				<img ng-src="img/{{name}}-playcricket.jpg" alt="PLAY CRICKET" style="height: 400px;width:400px"></a>
+				<p>PLAY CRICKET</p>
+				
+				
+			</div>
 			
 		</section>
 
@@ -83,42 +100,34 @@
 		</section> -->
 
 		<section class="row">
-			<div class="photo-grid">
-				<a ng-href="https://i1.wp.com/nevildsouza.files.wordpress.com/2017/04/eat.jpg?ssl=1&w=450" rel="lightbox" class="col-3">
-				<img ng-src="https://i1.wp.com/nevildsouza.files.wordpress.com/2017/04/eat.jpg?ssl=1&w=450" alt=""></a>
-				<a ng-href="https://i2.wp.com/nevildsouza.files.wordpress.com/2016/07/{{name}}-icon.png?w=400&h=400&crop=1&ssl=1" rel="lightbox" class="col-3">
-				<img ng-src="https://i2.wp.com/nevildsouza.files.wordpress.com/2016/07/{{name}}-icon.png?w=400&h=400&crop=1&ssl=1" alt="Example photo"></a>
-				<a ng-href="https://i2.wp.com/nevildsouza.files.wordpress.com/2016/07/{{name}}-icon.png?w=400&h=400&crop=1&ssl=1" rel="lightbox" class="col-3">
-				<img ng-src="https://i2.wp.com/nevildsouza.files.wordpress.com/2016/07/{{name}}-icon.png?w=400&h=400&crop=1&ssl=1" alt="Example photo"></a>
-				<a ng-href="https://i2.wp.com/nevildsouza.files.wordpress.com/2016/07/{{name}}-icon.png?w=400&h=400&crop=1&ssl=1" rel="lightbox" class="col-3">
-				<img ng-src="https://i2.wp.com/nevildsouza.files.wordpress.com/2016/07/{{name}}-icon.png?w=400&h=400&crop=1&ssl=1" alt="Example photo"></a>
-				<a ng-href="https://i2.wp.com/nevildsouza.files.wordpress.com/2016/07/{{name}}-icon.png?w=400&h=400&crop=1&ssl=1" rel="lightbox" class="col-3">
-				<img ng-src="https://i2.wp.com/nevildsouza.files.wordpress.com/2016/07/{{name}}-icon.png?w=400&h=400&crop=1&ssl=1" alt="Example photo"></a>
-				<a ng-href="https://i2.wp.com/nevildsouza.files.wordpress.com/2016/07/{{name}}-icon.png?w=400&h=400&crop=1&ssl=1" rel="lightbox" class="col-3">
-				<img ng-src="https://i2.wp.com/nevildsouza.files.wordpress.com/2016/07/{{name}}-icon.png?w=400&h=400&crop=1&ssl=1" alt="Example photo"></a>
-				
-				
-				
-			</div>
+			
 		</section>
 
 
 		<section class="row">
 			<div class="col">
-				<h2>Contact</h2>
+				<h2>Motivation</h2>
 				<p>
-					Want to work with us? Just send us an <a href="mailto:#">email</a>.
+					An idea implemented by one of Google Developers India member.
 				</p>
+				
+				<video width="500" height="300" controls>
+					<source src="vid/motivation.mp4" type="video/mp4">
+				</video>
 			</div>
 			<div class="col">
-				<h2>Follow us</h2>
+				<h2>Sign Languages</h2>
 				<p>
-					We are on <a href="http://twitter.com/rickwaalders">Twitter</a>, <a href="http://dribbble.com/rickwaalders">Dribbble</a> and <a href="http://instagram.com/rickwaalders">Instagram</a>.
+					Quick revision of sign languages to be taught to children to learn faster.
 				</p>
+				
+				<video width="500" height="300" controls>
+					<source src="vid/revision.mp4" type="video/mp4">
+				</video>
 			</div>
 		</section>
-
-
+		
+		
 		<section class="row">
 			<div class="col-full">
 				<p>
