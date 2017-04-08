@@ -54,3 +54,6 @@
   color: #f3f1ff;
 }
 
+ul {
+  list-style-type: none;
+}

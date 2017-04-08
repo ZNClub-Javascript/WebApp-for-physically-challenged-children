@@ -12,6 +12,8 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	
 	<title>Speak with Snaps | Child Assisstant</title>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
 
 </head>
 <body>
@@ -33,8 +35,17 @@
 		</nav> -->
 
 	</header>
+	
+	<script>
+	var app = angular.module('Snaps', []);
+	app.controller('searchCntl', function ($scope){
+	
+		$scope.placesVisited = [];
+		
+	});
+	</script>
 
-	<div id="content">
+	<div id="content" ng-app="Snaps" ng-controller="searchCntl">
 
 		<section class="intro">
 			<h1>Hello, <span class="nl"></span>we are here to help you.</h1>
@@ -51,7 +62,14 @@
 					<div class="box">
 					  <div class="container-1">
 						  <span class="icon"><i class="fa fa-search"></i></span>
-						  <input type="search" id="search" placeholder="Search a name..." />
+						  <input type="search" id="search" ng-model="name" placeholder="Search a name..." />
+						  
+						  <ul>  
+							<li  ng-repeat="place in placesVisited | filter:names">  
+								<a ng-href="https://www.google.co.in/webhp?q={{place}}">{{place}} </a>  
+							</li>  
+						  </ul>  
+						  
 					  </div>
 					</div>
 				</form>
@@ -71,9 +89,12 @@
 
 		<section class="row">
 			<div class="photo-grid">
-				<a href="img/example-photo-b.jpg" rel="lightbox" class="col-2"><img src="img/example-photo-b.jpg" alt="Example photo"></a>
-				<a href="img/example-photo-c.jpg" rel="lightbox" class="col-2"><img src="img/example-photo-c.jpg" alt="Example photo"></a>
-				<a href="img/example-photo-a.jpg" rel="lightbox" class="col-1"><img src="img/example-photo-a.jpg" alt="Example photo"></a>
+				<a ng-href="https://i2.wp.com/nevildsouza.files.wordpress.com/2016/07/{{name}}-icon.png?w=276&h=276&crop=1&ssl=1" rel="lightbox" class="col-2">
+				<img ng-src="https://i2.wp.com/nevildsouza.files.wordpress.com/2016/07/{{name}}-icon.png?w=276&h=276&crop=1&ssl=1" alt="Example photo"></a>
+				<a href="https://i2.wp.com/nevildsouza.files.wordpress.com/2016/07/python-icon.png?w=276&h=276&crop=1&ssl=1" rel="lightbox" class="col-2">
+				<img src="https://i2.wp.com/nevildsouza.files.wordpress.com/2016/07/python-icon.png?w=276&h=276&crop=1&ssl=1" alt="Example photo"></a>
+				<a href="img/example-photo-a.jpg" rel="lightbox" class="col-1">
+				<img src="img/example-photo-a.jpg" alt="Example photo"></a>
 			</div>
 		</section>
 
@@ -104,8 +125,9 @@
  
 	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>	
 	<script src="js/search-box.js"></script>
+	
 	
 	<script>
 	if (!window.jQuery) 
@@ -113,20 +135,8 @@
 	    document.write('<script src="js/vendor/jquery.1.11.min.js"><\/script>');
 	}
 	</script>
-
 	<script src="js/vendor/jquery.fluidbox.min.js"></script>
 	<script src="js/main.js"></script>
-
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'YOUR_GOOGLE_ANALYTICS_ID', 'auto');
-	  ga('send', 'pageview');
-
-	</script>
 
 </body>
 </html>
